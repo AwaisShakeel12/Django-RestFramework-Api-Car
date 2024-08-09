@@ -48,7 +48,7 @@ class VehicleTypeListView(generics.ListCreateAPIView):
 
 class VehicleListView(generics.ListCreateAPIView):
     authentication_classes = [TokenAuthentication]
-    # permission_classes = [ OnlyAdmin]
+    permission_classes = [ OnlyAdmin]
     queryset = Vehicle.objects.all()
     serializer_class = VehicleSerializer
 
